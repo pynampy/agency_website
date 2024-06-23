@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:marquee_list/marquee_list.dart';
-import 'package:marqueer/marqueer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
