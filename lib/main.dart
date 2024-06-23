@@ -58,10 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Align(
                       alignment: Alignment.topLeft,
-                      child: Image.asset("red_asset.png")),
+                      child: Image.asset("assets/red_asset.png")),
                   Align(
                       alignment: Alignment.topRight,
-                      child: Image.asset("blue_asset.png")),
+                      child: Image.asset("assets/blue_asset.png")),
                   Padding(
                     padding: const EdgeInsets.only(left: 250, right: 250),
                     child: Column(
