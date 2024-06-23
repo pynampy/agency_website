@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
+import 'package:marquee_list/marquee_list.dart';
+import 'package:marqueer/marqueer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
       home: const MyHomePage(),
@@ -39,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
               margin: EdgeInsets.only(top: 10, bottom: 10),
               height: 50,
               child: Image.asset(
-                "logo.png",
+                "assets/logo.png",
               ),
             ),
             Container(
@@ -98,6 +100,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 66,
                           width: 188,
                           decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromRGBO(0, 0, 0, 0.31),
+                                  offset: Offset(0, 4),
+                                  blurRadius: 2,
+                                  spreadRadius: 0,
+                                ),
+                              ],
                               color: Colors.black,
                               borderRadius: BorderRadius.circular(10)),
                           child: Center(
@@ -107,7 +117,33 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fontFamily: "Brockmann", color: Colors.white),
                             ),
                           ),
-                        )
+                        ),
+                        SizedBox(
+                          height: 50,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 20),
+                          height: 66,
+                          width: 188,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromRGBO(0, 0, 0, 0.31),
+                                  offset: Offset(0, 4),
+                                  blurRadius: 2,
+                                  spreadRadius: 0,
+                                ),
+                              ],
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Center(
+                            child: Text(
+                              "See Plans",
+                              style: TextStyle(
+                                  fontFamily: "Brockmann", color: Colors.white),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
